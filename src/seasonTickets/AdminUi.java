@@ -8,7 +8,7 @@ package seasonTickets;
 
 /**
  *
- * @author Isuru Lakmal
+ * @author Isuru Lakmal test2
  */
 public class AdminUi extends javax.swing.JFrame {
 
