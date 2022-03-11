@@ -514,8 +514,18 @@ public class logInUi extends javax.swing.JFrame {
         jLabel26.setText("Ticket Type");
 
         txtTicketType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Student", "University", "Teacher" }));
+        txtTicketType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTicketTypeActionPerformed(evt);
+            }
+        });
 
         txtGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female" }));
+        txtGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtGenderActionPerformed(evt);
+            }
+        });
 
         jLabel27.setText("Age");
 
@@ -676,7 +686,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
                 .addGap(2, 2, 2)
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 374, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -684,8 +694,6 @@ public class logInUi extends javax.swing.JFrame {
 
         jLabel33.setFont(new java.awt.Font("Tekton Pro Cond", 0, 24)); // NOI18N
         jLabel33.setText("Registration Completed !");
-
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isuru Lakmal\\Desktop\\check.png")); // NOI18N
 
         jButton11.setText("Next");
 
@@ -800,7 +808,7 @@ public class logInUi extends javax.swing.JFrame {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             insert = con1.prepareStatement("insert into reg(name,schl_uni,address,destination,gender,age,ticket_type,password)values(?,?,?,?,?,?,?,?)");
             insert.setString(1, name);
             insert.setString(2, sclUni);
@@ -827,6 +835,14 @@ public class logInUi extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtGenderActionPerformed
+
+    private void txtTicketTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTicketTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTicketTypeActionPerformed
 
     /**
      * @param args the command line arguments
