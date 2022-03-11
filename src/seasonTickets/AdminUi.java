@@ -71,9 +71,9 @@ public class AdminUi extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(72, 72, 72)
+                .addGap(82, 82, 82)
                 .addComponent(jButton1)
-                .addGap(43, 43, 43)
+                .addGap(33, 33, 33)
                 .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
