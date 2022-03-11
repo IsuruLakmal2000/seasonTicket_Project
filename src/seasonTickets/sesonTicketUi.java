@@ -11,7 +11,7 @@ import seasonTickets.logInUi;
 
 /**
  *
- * @author Isuru Lakmal1
+ * @author Isuru Lakmal123
  */
 public class sesonTicketUi extends javax.swing.JFrame {
 
