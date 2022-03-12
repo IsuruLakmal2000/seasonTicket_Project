@@ -12,6 +12,8 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+import seasonTickets.sesonTicketUi;
+import seasonTickets.AdminUi;
 
 
 public class logInUi extends javax.swing.JFrame {
@@ -875,6 +877,14 @@ public class logInUi extends javax.swing.JFrame {
             pst.executeUpdate();
             //JOptionPane.showMessageDialog(this,"Registration Successfull !");
             
+        txtName.setText("");   
+        txtSclUni.setText("");
+        txtAddress.setText("");
+        txtDestination.setText("");       
+        txtAge.setText("");
+        cPassword.setText("");
+        txtName.requestFocus();
+            
             jTabbedPane1.setSelectedIndex(5);
         
             
@@ -903,7 +913,9 @@ public class logInUi extends javax.swing.JFrame {
     }//GEN-LAST:event_welcomeAdminButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // addmin login pannel log in button
+        
+        new AdminUi().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void adminLogInHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLogInHomeActionPerformed
