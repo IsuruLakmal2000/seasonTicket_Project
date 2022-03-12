@@ -173,7 +173,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addGap(154, 154, 154))
         );
 
-        jTabbedPane1.addTab("wellcome", jPanel1);
+        jTabbedPane1.addTab("welcome", jPanel1);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("Season Ticket issue ");
@@ -311,7 +311,7 @@ public class logInUi extends javax.swing.JFrame {
 
         jLabel17.setText("Password");
 
-        jLabel18.setText("Confirm Passoword");
+        jLabel18.setText("Confirm Password");
 
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton7.setText("Sign Up");
@@ -746,8 +746,6 @@ public class logInUi extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Tekton Pro Cond", 0, 24)); // NOI18N
         jLabel33.setText("Registration Completed !");
 
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isuru Lakmal\\Desktop\\check.png")); // NOI18N
-
         jButton11.setText("Next");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -861,6 +859,7 @@ public class logInUi extends javax.swing.JFrame {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
+
             con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("insert into reg(name,schl_uni,address,destination,gender,age,ticket_type,password)values(?,?,?,?,?,?,?,?)");
             pst.setString(1, name);
@@ -871,6 +870,7 @@ public class logInUi extends javax.swing.JFrame {
             pst.setString(6, age);
             pst.setString(7, ticketType);
             pst.setString(8, password);
+
             
             pst.executeUpdate();
             //JOptionPane.showMessageDialog(this,"Registration Successfull !");
