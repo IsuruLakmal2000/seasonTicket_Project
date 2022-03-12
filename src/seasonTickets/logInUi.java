@@ -162,7 +162,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addGap(154, 154, 154))
         );
 
-        jTabbedPane1.addTab("wellcome", jPanel1);
+        jTabbedPane1.addTab("welcome", jPanel1);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("Season Ticket issue ");
@@ -280,7 +280,7 @@ public class logInUi extends javax.swing.JFrame {
 
         jLabel17.setText("Password");
 
-        jLabel18.setText("Confirm Passoword");
+        jLabel18.setText("Confirm Password");
 
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton7.setText("Sign Up");
@@ -325,7 +325,7 @@ public class logInUi extends javax.swing.JFrame {
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -676,7 +676,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
                 .addGap(2, 2, 2)
-                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 374, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -684,8 +684,6 @@ public class logInUi extends javax.swing.JFrame {
 
         jLabel33.setFont(new java.awt.Font("Tekton Pro Cond", 0, 24)); // NOI18N
         jLabel33.setText("Registration Completed !");
-
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\Isuru Lakmal\\Desktop\\check.png")); // NOI18N
 
         jButton11.setText("Next");
 
@@ -800,7 +798,7 @@ public class logInUi extends javax.swing.JFrame {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             insert = con1.prepareStatement("insert into reg(name,schl_uni,address,destination,gender,age,ticket_type,password)values(?,?,?,?,?,?,?,?)");
             insert.setString(1, name);
             insert.setString(2, sclUni);

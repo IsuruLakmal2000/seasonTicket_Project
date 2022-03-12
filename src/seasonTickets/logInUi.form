@@ -46,8 +46,8 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="wellcome">
-                <Property name="tabTitle" type="java.lang.String" value="wellcome"/>
+              <JTabbedPaneConstraints tabName="welcome">
+                <Property name="tabTitle" type="java.lang.String" value="welcome"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -380,7 +380,7 @@
                               <Component id="jTextField4" min="-2" pref="314" max="-2" attributes="0"/>
                               <Component id="jTextField3" min="-2" pref="314" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="180" max="32767" attributes="0"/>
+                          <EmptySpace pref="237" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -446,7 +446,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel18">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Confirm Passoword"/>
+                    <Property name="text" type="java.lang.String" value="Confirm Password"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField3">
@@ -1074,11 +1074,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel35">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\Isuru Lakmal\Desktop\check.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton11">
                   <Properties>
