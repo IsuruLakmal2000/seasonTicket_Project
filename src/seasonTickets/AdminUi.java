@@ -1,6 +1,7 @@
 package seasonTickets;
 
-import seasonTickets.logInUi;import java.sql.Connection;
+import seasonTickets.logInUi;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
 
 
 /**
@@ -24,7 +26,9 @@ public class AdminUi extends javax.swing.JFrame {
      */
     public AdminUi() {
         initComponents();
+        
         tableUpdate();
+        
     }
 
     /**
@@ -40,8 +44,8 @@ public class AdminUi extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        adminUiDetailButton = new javax.swing.JButton();
+        adminUiOrderButton = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -64,14 +68,19 @@ public class AdminUi extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Admin Profile");
 
-        jButton1.setText("Details");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        adminUiDetailButton.setText("Details");
+        adminUiDetailButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                adminUiDetailButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Orders");
+        adminUiOrderButton.setText("Orders");
+        adminUiOrderButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminUiOrderButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -82,8 +91,8 @@ public class AdminUi extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(adminUiDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(adminUiOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -94,9 +103,9 @@ public class AdminUi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(83, 83, 83)
-                .addComponent(jButton1)
+                .addComponent(adminUiDetailButton)
                 .addGap(32, 32, 32)
-                .addComponent(jButton2)
+                .addComponent(adminUiOrderButton)
                 .addContainerGap(232, Short.MAX_VALUE))
         );
 
@@ -325,9 +334,15 @@ public class AdminUi extends javax.swing.JFrame {
     }
     
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void adminUiDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminUiDetailButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_adminUiDetailButtonActionPerformed
+
+    private void adminUiOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminUiOrderButtonActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_adminUiOrderButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -365,8 +380,8 @@ public class AdminUi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton adminUiDetailButton;
+    private javax.swing.JButton adminUiOrderButton;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

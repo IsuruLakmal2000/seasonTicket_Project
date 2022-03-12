@@ -73,8 +73,8 @@
                       <Group type="103" groupAlignment="2" attributes="0">
                           <Component id="jLabel1" alignment="2" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="2" min="-2" pref="94" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="2" min="-2" pref="95" max="-2" attributes="0"/>
+                          <Component id="adminUiDetailButton" alignment="2" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="adminUiOrderButton" alignment="2" min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="75" max="32767" attributes="0"/>
                   </Group>
@@ -88,9 +88,9 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminUiDetailButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="adminUiOrderButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="232" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -112,18 +112,21 @@
                 <Property name="text" type="java.lang.String" value="Admin Profile"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="adminUiDetailButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Details"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminUiDetailButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="adminUiOrderButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Orders"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminUiOrderButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
