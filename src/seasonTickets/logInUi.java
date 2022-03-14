@@ -861,6 +861,8 @@ public class logInUi extends javax.swing.JFrame {
 
     Connection con1;
     PreparedStatement pst;
+    public String profileName;
+    
     
     private void welcomeStudentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_welcomeStudentButtonActionPerformed
         jTabbedPane1.setSelectedIndex(3);
@@ -1070,12 +1072,27 @@ public class logInUi extends javax.swing.JFrame {
            
             
             ResultSet rs = pst.executeQuery();
-            
+           
             if(rs.next()){
                 JOptionPane.showMessageDialog(null, "log in success!");
+             
+                //sesonTicketUi seasonTickObj = new sesonTicketUi();
+                profileName =rs.getString("name");
+                //seasonTickObj.jLabel222.setText(profileName);
+                
+              //  seasonTickObj.profileName =rs.getString("name");
+                
+                //System.out.println(seasonTickObj.profileName);
+                
+                dispose();
+                new sesonTicketUi(profileName).setVisible(true);
+                
+                
             }else{
                 JOptionPane.showMessageDialog(null, "password mismatch");
-                
+                studentId.setText("");
+                passowrdTxt.setText("");
+                studentId.requestFocus();
             }
            
             

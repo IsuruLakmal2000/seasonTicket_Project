@@ -18,8 +18,16 @@ public class sesonTicketUi extends javax.swing.JFrame {
     /**
      * Creates new form sesonTicketUi
      */
-    public sesonTicketUi() {
+     public String profileName ;
+     
+    public sesonTicketUi(String name) {
         initComponents();
+        
+        jLabel222.setText(name);
+        System.out.println("constructor run");
+        
+       
+        
     }
 
     /**
@@ -34,7 +42,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel222 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -58,9 +66,9 @@ public class sesonTicketUi extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(204, 255, 255));
 
-        jButton5.setText("Issue a Ticket");
+        jButton5.setText("Order a Ticket");
 
-        jLabel2.setText("Profile");
+        jLabel222.setText("Profile");
 
         jButton2.setText("Log out");
 
@@ -72,7 +80,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel222))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -83,7 +91,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(jLabel222)
                 .addGap(111, 111, 111)
                 .addComponent(jButton5)
                 .addGap(18, 18, 18)
@@ -142,7 +150,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3)
                     .addComponent(jTextField1)
@@ -194,7 +202,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGap(0, 502, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +215,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGap(0, 502, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,7 +228,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGap(0, 502, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +241,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGap(0, 502, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,7 +269,10 @@ public class sesonTicketUi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public void setProfileName(){
+        //jLabel222.setText(profileName);
+            
+    }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -298,6 +309,8 @@ public class sesonTicketUi extends javax.swing.JFrame {
             public void run() {
                // new sesonTicketUi().setVisible(true);
                 new logInUi().setVisible(true);
+                
+              //  logInUi logObj = new logInUi();
             }
         });
     }
@@ -308,7 +321,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel222;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
