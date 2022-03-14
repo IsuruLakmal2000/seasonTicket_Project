@@ -303,7 +303,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("select*from reg");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
