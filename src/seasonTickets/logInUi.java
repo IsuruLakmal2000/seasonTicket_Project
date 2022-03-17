@@ -131,6 +131,12 @@ public class logInUi extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         adminregCompleeNextButton = new javax.swing.JButton();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -900,6 +906,78 @@ public class logInUi extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("adminRegComplete", jPanel12);
 
+        jLabel41.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
+        jLabel41.setText("Log in Completed !");
+
+        jButton1.setText("next");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap(315, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel41)
+                        .addGap(305, 305, 305))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(366, 366, 366))))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jLabel41)
+                .addGap(72, 72, 72)
+                .addComponent(jButton1)
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("log in st complete", jPanel13);
+
+        jLabel42.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
+        jLabel42.setText("Log in Completed !");
+
+        jButton2.setText("next");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap(315, Short.MAX_VALUE)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel42)
+                        .addGap(305, 305, 305))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(366, 366, 366))))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jLabel42)
+                .addGap(72, 72, 72)
+                .addComponent(jButton2)
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("log comple admin", jPanel14);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -921,7 +999,7 @@ public class logInUi extends javax.swing.JFrame {
     PreparedStatement pst,pst2;
     public String profileName;
     String selectedDistrict;
-    ResultSet rs2;
+    
     
     
     
@@ -958,7 +1036,7 @@ public class logInUi extends javax.swing.JFrame {
             
             
             pst.executeUpdate();
-            //JOptionPane.showMessageDialog(this,"Registration Successfull !");
+           
             
         txtDistrict.setText("");   
         txtDnumber.setText("");
@@ -996,16 +1074,17 @@ public class logInUi extends javax.swing.JFrame {
     
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         //Sudent sign up
-        //PreparedStatement pst;
+        
         String name = txtName.getText();   
         String sclUni = txtSclUni.getText();
         String address = txtAddress.getText();
         
         String district = selectedDistrict;
         String fromPlaceSignUp = fromPlace.getSelectedItem().toString();
-        //String toPlaceSignUp = toPlace.getSelectedItem().toString();
+        String toPlaceSignUp = toPlace.getSelectedItem().toString();
         String regNumSignUp = regNum.getText();
         String routeNumSignUp = routeNum.getText();
+        
         String gender = txtGender.getSelectedItem().toString();
         String age = txtAge.getText();
         String ticketType = txtTicketType.getSelectedItem().toString();
@@ -1017,17 +1096,21 @@ public class logInUi extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
 
             con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
-            pst = con1.prepareStatement("insert into reg(name,schl_uni,address,destination,gender,age,ticket_type,password)values(?,?,?,?,?,?,?,?)");
-            
+            pst = con1.prepareStatement("insert into reg(name,schl_uni,address,district,from_,to_,age,ticket_type,stu_uni_reg_no,route_no,gender,password)values(?,?,?,?,?,?,?,?,?,?,?,?)");
+                 
           //  add(toPlace); */
             pst.setString(1, name);
             pst.setString(2, sclUni);
             pst.setString(3, address);
-       //     pst.setString(4, destination);
-            pst.setString(5, gender);
-            pst.setString(6, age);
-            pst.setString(7, ticketType);
-            pst.setString(8, password);
+            pst.setString(4, selectedDistrict);
+            pst.setString(5, fromPlaceSignUp);
+            pst.setString(6, toPlaceSignUp);
+            pst.setString(7, age);
+            pst.setString(8, ticketType);
+            pst.setString(9, regNumSignUp);
+            pst.setString(10, routeNumSignUp);
+            pst.setString(11, gender);
+            pst.setString(12, password);
 
             
             pst.executeUpdate();
@@ -1036,14 +1119,15 @@ public class logInUi extends javax.swing.JFrame {
         txtName.setText("");   
         txtSclUni.setText("");
         txtAddress.setText("");
-               
+        regNum.setText("");       
         txtAge.setText("");
         cPassword.setText("");
+        routeNum.setText("");
+        
         txtName.requestFocus();
             
             jTabbedPane1.setSelectedIndex(5);
         
-            
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
@@ -1079,13 +1163,12 @@ public class logInUi extends javax.swing.JFrame {
             pst.setString(1,adminLogInId.getText());
             pst.setString(2, adminLogInPassword.getText());
            
-            
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "log in success!");
-                dispose();
-                new AdminUi().setVisible(true);
+               // JOptionPane.showMessageDialog(null, "log in success!");
+                jTabbedPane1.setSelectedIndex(8);
+                
                 
             }else{
                 JOptionPane.showMessageDialog(null, "password mismatch");
@@ -1093,11 +1176,6 @@ public class logInUi extends javax.swing.JFrame {
                 adminLogInPassword.setText("");
                 adminLogInId.requestFocus();
             }
-           
-            
-            //jTabbedPane1.setSelectedIndex(5);
-        
-            
             
         } catch (ClassNotFoundException ex) {
            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
@@ -1142,19 +1220,9 @@ public class logInUi extends javax.swing.JFrame {
             ResultSet rs = pst.executeQuery();
            
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "log in success!");
-             
-                //sesonTicketUi seasonTickObj = new sesonTicketUi();
-                profileName =rs.getString("name");
-                //seasonTickObj.jLabel222.setText(profileName);
                 
-              //  seasonTickObj.profileName =rs.getString("name");
-                
-                //System.out.println(seasonTickObj.profileName);
-                
-                dispose();
-                new sesonTicketUi(profileName).setVisible(true);
-                
+                profileName =rs.getString("name");    
+                jTabbedPane1.setSelectedIndex(7);
                 
             }else{
                 JOptionPane.showMessageDialog(null, "password mismatch");
@@ -1163,11 +1231,6 @@ public class logInUi extends javax.swing.JFrame {
                 studentId.requestFocus();
             }
            
-            
-            //jTabbedPane1.setSelectedIndex(5);
-        
-            
-            
         } catch (ClassNotFoundException ex) {
            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
             
@@ -1196,9 +1259,12 @@ public class logInUi extends javax.swing.JFrame {
             // TODO add your handling code here:
           
          toPlace.removeAllItems();
+         fromPlace.removeAllItems();
          selectedDistrict = DistrictStudentSignUp.getSelectedItem().toString();
          System.out.println(selectedDistrict);
-         toPlaceDropdown();
+        
+          toPlaceDropdown();
+          fromPlaceDropdown();
     }//GEN-LAST:event_DistrictStudentSignUpActionPerformed
 
     private void toPlaceDropdown(){
@@ -1210,9 +1276,9 @@ public class logInUi extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
            // st = con1.createStatement();
-           
+          
             
-            
+            ResultSet rs2;
              pst3 = con2.prepareStatement("select schools from places where district='"+selectedDistrict+"'");
              rs2 = pst3.executeQuery();
             
@@ -1220,6 +1286,7 @@ public class logInUi extends javax.swing.JFrame {
             while(rs2.next()){
                 toPlace.addItem(rs2.getString("schools"));
               //  System.out.println(ids);
+               
             }
            
             
@@ -1231,26 +1298,20 @@ public class logInUi extends javax.swing.JFrame {
         }
            
     }
-    
-    private void toPlaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toPlaceMouseClicked
-     /*   String ids;
-        Connection con2;
-        PreparedStatement pst3;
+    private void fromPlaceDropdown(){
+        Connection con3;
+        PreparedStatement pst4;
         
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
-           // st = con1.createStatement();
-           
-            ResultSet rs2;
-            
-             pst3 = con2.prepareStatement("select schools from places where district='"+selectedDistrict+"'");
-             rs2 = pst3.executeQuery();
-            
-         //   Vector v = new Vector();
-            while(rs2.next()){
-                toPlace.addItem(rs2.getString("schools"));
-              //  System.out.println(ids);
+            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            ResultSet rs3;
+             pst4 = con3.prepareStatement("select *from towns");
+             rs3 = pst4.executeQuery();
+         
+            while(rs3.next()){
+                fromPlace.addItem(rs3.getString(selectedDistrict));
+             
             }
            
             
@@ -1260,11 +1321,24 @@ public class logInUi extends javax.swing.JFrame {
         }catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
-           */
-        
-        
-        
+    }
+    
+    private void toPlaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toPlaceMouseClicked
+    
     }//GEN-LAST:event_toPlaceMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        dispose();
+        new sesonTicketUi(profileName).setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new AdminUi().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1318,8 +1392,10 @@ public class logInUi extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler3;
     private javax.swing.Box.Filler filler4;
     private javax.swing.JComboBox fromPlace;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton8;
@@ -1359,6 +1435,8 @@ public class logInUi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1368,6 +1446,8 @@ public class logInUi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
