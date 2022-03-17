@@ -24,6 +24,7 @@ public class logInUi extends javax.swing.JFrame {
      */
     public logInUi() {
         initComponents();
+       // toPlaceDropdown();
     }
 
     /**
@@ -116,11 +117,11 @@ public class logInUi extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        studentSignUpDistrict = new javax.swing.JTextField();
         fromPlace = new javax.swing.JComboBox();
         toPlace = new javax.swing.JComboBox();
         regNum = new javax.swing.JTextField();
         routeNum = new javax.swing.JTextField();
+        DistrictStudentSignUp = new javax.swing.JComboBox();
         studentSignUpInHome = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -620,9 +621,23 @@ public class logInUi extends javax.swing.JFrame {
 
         jLabel40.setText("District");
 
-        fromPlace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        toPlace.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toPlaceMouseClicked(evt);
+            }
+        });
+        toPlace.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toPlaceActionPerformed(evt);
+            }
+        });
 
-        toPlace.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        DistrictStudentSignUp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Colombo", "Gampaha", "Kaluthara", "Galle", "Mathara", "Hambantota", "Kandy", "Madakalapuwa", "Jaffna", "Rathnapura", "Anuradhapura", "Polonnaruwa", "Tricomalee", "Kurunagala", "Nuwara Eliya", "Ampara", "Wawniya" }));
+        DistrictStudentSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DistrictStudentSignUpActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -645,26 +660,25 @@ public class logInUi extends javax.swing.JFrame {
                     .addComponent(jLabel27)
                     .addComponent(jLabel40))
                 .addGap(27, 27, 27)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
-                        .addComponent(txtSclUni)
-                        .addComponent(txtName)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                            .addComponent(txtTicketType, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(txtAge)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(fromPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addGap(31, 31, 31)
-                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(toPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(studentSignUpDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                    .addComponent(txtSclUni)
+                    .addComponent(txtName)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(txtTicketType, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAge)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(fromPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(toPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(DistrictStudentSignUp, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel29)
@@ -720,7 +734,7 @@ public class logInUi extends javax.swing.JFrame {
                     .addComponent(jLabel28)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel40)
-                    .addComponent(studentSignUpDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DistrictStudentSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
@@ -906,6 +920,9 @@ public class logInUi extends javax.swing.JFrame {
     Connection con1,con2;
     PreparedStatement pst,pst2;
     public String profileName;
+    String selectedDistrict;
+    ResultSet rs2;
+    
     
     
     private void welcomeStudentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_welcomeStudentButtonActionPerformed
@@ -983,17 +1000,17 @@ public class logInUi extends javax.swing.JFrame {
         String name = txtName.getText();   
         String sclUni = txtSclUni.getText();
         String address = txtAddress.getText();
-        String district = studentSignUpDistrict.getText();
+        
+        String district = selectedDistrict;
         String fromPlaceSignUp = fromPlace.getSelectedItem().toString();
-        String toPlaceSignUp = toPlace.getSelectedItem().toString();
+        //String toPlaceSignUp = toPlace.getSelectedItem().toString();
         String regNumSignUp = regNum.getText();
         String routeNumSignUp = routeNum.getText();
         String gender = txtGender.getSelectedItem().toString();
         String age = txtAge.getText();
         String ticketType = txtTicketType.getSelectedItem().toString();
         String password = cPassword.getText();
-        Statement st;
-        String ids;
+        
         
         
         try {
@@ -1001,16 +1018,8 @@ public class logInUi extends javax.swing.JFrame {
 
             con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("insert into reg(name,schl_uni,address,destination,gender,age,ticket_type,password)values(?,?,?,?,?,?,?,?)");
-          /*  st = con1.createStatement();
-            ResultSet rs2;
-            rs2 = pst2.executeQuery("select school from places");
-            Vector v = new Vector();
-            while(rs2.next()){
-                ids = rs2.getString(1);
-                v.add(ids);
-                System.out.println(ids);
-            }
-            add(toPlace); */
+            
+          //  add(toPlace); */
             pst.setString(1, name);
             pst.setString(2, sclUni);
             pst.setString(3, address);
@@ -1177,6 +1186,86 @@ public class logInUi extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(1);
     }//GEN-LAST:event_adminregCompleeNextButtonActionPerformed
 
+    private void toPlaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toPlaceActionPerformed
+        // TODO add your handling code here:
+        System.out.println("item select");
+    }//GEN-LAST:event_toPlaceActionPerformed
+    
+    private void DistrictStudentSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DistrictStudentSignUpActionPerformed
+        
+            // TODO add your handling code here:
+          
+         toPlace.removeAllItems();
+         selectedDistrict = DistrictStudentSignUp.getSelectedItem().toString();
+         System.out.println(selectedDistrict);
+         toPlaceDropdown();
+    }//GEN-LAST:event_DistrictStudentSignUpActionPerformed
+
+    private void toPlaceDropdown(){
+         
+        Connection con2;
+        PreparedStatement pst3;
+        
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+           // st = con1.createStatement();
+           
+            
+            
+             pst3 = con2.prepareStatement("select schools from places where district='"+selectedDistrict+"'");
+             rs2 = pst3.executeQuery();
+            
+         //   Vector v = new Vector();
+            while(rs2.next()){
+                toPlace.addItem(rs2.getString("schools"));
+              //  System.out.println(ids);
+            }
+           
+            
+        } catch (ClassNotFoundException ex) {
+           Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+    }
+    
+    private void toPlaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toPlaceMouseClicked
+     /*   String ids;
+        Connection con2;
+        PreparedStatement pst3;
+        
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+           // st = con1.createStatement();
+           
+            ResultSet rs2;
+            
+             pst3 = con2.prepareStatement("select schools from places where district='"+selectedDistrict+"'");
+             rs2 = pst3.executeQuery();
+            
+         //   Vector v = new Vector();
+            while(rs2.next()){
+                toPlace.addItem(rs2.getString("schools"));
+              //  System.out.println(ids);
+            }
+           
+            
+        } catch (ClassNotFoundException ex) {
+           Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }catch (SQLException ex) {
+            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           */
+        
+        
+        
+    }//GEN-LAST:event_toPlaceMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1213,6 +1302,7 @@ public class logInUi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JComboBox DistrictStudentSignUp;
     private javax.swing.JTextField Dname;
     private javax.swing.JPasswordField adminCPassword;
     private javax.swing.JButton adminLogInHome;
@@ -1295,9 +1385,8 @@ public class logInUi extends javax.swing.JFrame {
     private javax.swing.JButton studentLogInButton;
     private javax.swing.JButton studentLogInHome;
     private javax.swing.JButton studentLogInSignupButton;
-    private javax.swing.JTextField studentSignUpDistrict;
     private javax.swing.JButton studentSignUpInHome;
-    private javax.swing.JComboBox toPlace;
+    public javax.swing.JComboBox toPlace;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtDistrict;

@@ -815,32 +815,30 @@
                               <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtAddress" alignment="0" pref="281" max="32767" attributes="0"/>
-                                  <Component id="txtSclUni" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtName" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="txtTicketType" min="-2" pref="125" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="filler2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="txtAge" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="fromPlace" min="-2" pref="105" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                              <Component id="jLabel37" min="-2" pref="20" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="toPlace" min="-2" pref="105" max="-2" attributes="0"/>
-                                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtAddress" alignment="0" pref="281" max="32767" attributes="0"/>
+                              <Component id="txtSclUni" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtName" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="txtTicketType" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="filler2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txtAge" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="fromPlace" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                          <Component id="jLabel37" min="-2" pref="20" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="toPlace" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="studentSignUpDistrict" alignment="0" min="-2" pref="279" max="-2" attributes="0"/>
+                              <Component id="DistrictStudentSignUp" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -908,7 +906,7 @@
                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="password" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="studentSignUpDistrict" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="DistrictStudentSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1117,35 +1115,61 @@
                     <Property name="text" type="java.lang.String" value="District"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="studentSignUpDistrict">
-                </Component>
                 <Component class="javax.swing.JComboBox" name="fromPlace">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="toPlace">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="toPlaceMouseClicked"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toPlaceActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="regNum">
                 </Component>
                 <Component class="javax.swing.JTextField" name="routeNum">
+                </Component>
+                <Component class="javax.swing.JComboBox" name="DistrictStudentSignUp">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="17">
+                        <StringItem index="0" value="Colombo"/>
+                        <StringItem index="1" value="Gampaha"/>
+                        <StringItem index="2" value="Kaluthara"/>
+                        <StringItem index="3" value="Galle"/>
+                        <StringItem index="4" value="Mathara"/>
+                        <StringItem index="5" value="Hambantota"/>
+                        <StringItem index="6" value="Kandy"/>
+                        <StringItem index="7" value="Madakalapuwa"/>
+                        <StringItem index="8" value="Jaffna"/>
+                        <StringItem index="9" value="Rathnapura"/>
+                        <StringItem index="10" value="Anuradhapura"/>
+                        <StringItem index="11" value="Polonnaruwa"/>
+                        <StringItem index="12" value="Tricomalee"/>
+                        <StringItem index="13" value="Kurunagala"/>
+                        <StringItem index="14" value="Nuwara Eliya"/>
+                        <StringItem index="15" value="Ampara"/>
+                        <StringItem index="16" value="Wawniya"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DistrictStudentSignUpActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
