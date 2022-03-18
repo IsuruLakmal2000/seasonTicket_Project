@@ -51,7 +51,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        MonthSelectCombo = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -162,10 +162,15 @@ public class sesonTicketUi extends javax.swing.JFrame {
 
         jLabel5.setText("Duration");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Month" }));
-        jComboBox1.addMouseListener(new java.awt.event.MouseAdapter() {
+        MonthSelectCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Month" }));
+        MonthSelectCombo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jComboBox1MouseClicked(evt);
+                MonthSelectComboMouseClicked(evt);
+            }
+        });
+        MonthSelectCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonthSelectComboActionPerformed(evt);
             }
         });
 
@@ -186,7 +191,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MonthSelectCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(95, 95, 95))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,7 +206,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
                 .addGap(78, 78, 78)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MonthSelectCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(75, 75, 75))
@@ -543,12 +548,16 @@ public class sesonTicketUi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPanel3MouseClicked
 
-    private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox1MouseClicked
+    private void MonthSelectComboMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MonthSelectComboMouseClicked
         // Detecting currrent date
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");  
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM");  
         LocalDateTime now = LocalDateTime.now();
         System.out.println(dtf.format(now));  
-    }//GEN-LAST:event_jComboBox1MouseClicked
+    }//GEN-LAST:event_MonthSelectComboMouseClicked
+
+    private void MonthSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonthSelectComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MonthSelectComboActionPerformed
     public void setProfileName(){
         //jLabel222.setText(profileName);
             
@@ -597,6 +606,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
     private javax.swing.JTextField CardMonth;
     private javax.swing.JTextField CardNumber;
     private javax.swing.JTextField CardYear;
+    private javax.swing.JComboBox MonthSelectCombo;
     private javax.swing.JTextField NameText;
     private javax.swing.JButton PayButton;
     private javax.swing.JButton jButton1;
@@ -604,7 +614,6 @@ public class sesonTicketUi extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
