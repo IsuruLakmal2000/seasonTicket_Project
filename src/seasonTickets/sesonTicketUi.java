@@ -24,6 +24,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         initComponents();
         
         jLabel222.setText(name);
+        //System.out.println("constructor run"); 
         System.out.println("constructor run"); 
         //monthUpdate();
         
@@ -494,11 +495,11 @@ public class sesonTicketUi extends javax.swing.JFrame {
         // Pay Button
 
         if (NameText.getText().equals("")|| CardNumber.getText().equals("") || CardMonth.getText().equals("")|| CardYear.getText().equals("")|| CardCVV.getText().equals("")||CardMonth.getText().equals("MM")|| CardYear.getText().equals("YYYY")){
-            JOptionPane.showMessageDialog(null, "Please fill all the details");
+            JOptionPane.showMessageDialog(null, "Please fill all the details");         
            // PayButton.setEnabled(true);
         }
         else{
-            jTabbedPane1.setSelectedIndex(2);
+            jTabbedPane1.setSelectedIndex(2);       
         }
         
     }//GEN-LAST:event_PayButtonActionPerformed
