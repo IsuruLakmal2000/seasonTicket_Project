@@ -538,7 +538,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("select*from reg");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -617,7 +617,7 @@ public class AdminUi extends javax.swing.JFrame {
             
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("update reg set name=?,schl_uni=?,address=?,district=?,from_=?,to_=?,age=?,ticket_type=?,stu_uni_reg_no=?,route_no=?,gender=? where id=?");
                  
           //  add(toPlace); */
@@ -690,7 +690,7 @@ public class AdminUi extends javax.swing.JFrame {
         
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
            // st = con1.createStatement();
           
             
@@ -720,7 +720,7 @@ public class AdminUi extends javax.swing.JFrame {
         
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             ResultSet rs3;
              pst5 = con3.prepareStatement("select *from towns");
              rs3 = pst5.executeQuery();
