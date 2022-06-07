@@ -24,9 +24,9 @@ public class sesonTicketUi extends javax.swing.JFrame {
         initComponents();
         
         jLabel222.setText(name);
-        //System.out.println("constructor run"); 
+        //System.out.println("constructor run"); //test01
         System.out.println("constructor run"); 
-        //monthUpdate();
+        monthUpdate();
         
     }
     private void monthUpdate(){
@@ -39,7 +39,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         //int date2 = Integer.parseInt(formatter.format(date));
 
         if(month > 1){
-            //System.out.println(month+1);3
+            System.out.println(month+1);
         }
     }
     
