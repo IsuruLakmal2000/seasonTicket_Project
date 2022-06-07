@@ -24,7 +24,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         initComponents();
         
         jLabel222.setText(name);
-        //System.out.println("constructor run"); 
+        //System.out.println("constructor run"); //test01
         System.out.println("constructor run"); 
         monthUpdate();
         
