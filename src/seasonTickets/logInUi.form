@@ -1162,24 +1162,25 @@
                 <Component class="javax.swing.JComboBox" name="DistrictStudentSignUp">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="17">
-                        <StringItem index="0" value="Colombo"/>
-                        <StringItem index="1" value="Gampaha"/>
-                        <StringItem index="2" value="Kaluthara"/>
-                        <StringItem index="3" value="Galle"/>
-                        <StringItem index="4" value="Mathara"/>
-                        <StringItem index="5" value="Hambantota"/>
-                        <StringItem index="6" value="Kandy"/>
-                        <StringItem index="7" value="Madakalapuwa"/>
-                        <StringItem index="8" value="Jaffna"/>
-                        <StringItem index="9" value="Rathnapura"/>
-                        <StringItem index="10" value="Anuradhapura"/>
-                        <StringItem index="11" value="Polonnaruwa"/>
-                        <StringItem index="12" value="Tricomalee"/>
-                        <StringItem index="13" value="Kurunagala"/>
-                        <StringItem index="14" value="Nuwara Eliya"/>
-                        <StringItem index="15" value="Ampara"/>
-                        <StringItem index="16" value="Wawniya"/>
+                      <StringArray count="18">
+                        <StringItem index="0" value="Select District..."/>
+                        <StringItem index="1" value="Colombo"/>
+                        <StringItem index="2" value="Gampaha"/>
+                        <StringItem index="3" value="Kaluthara"/>
+                        <StringItem index="4" value="Galle"/>
+                        <StringItem index="5" value="Mathara"/>
+                        <StringItem index="6" value="Hambantota"/>
+                        <StringItem index="7" value="Kandy"/>
+                        <StringItem index="8" value="Madakalapuwa"/>
+                        <StringItem index="9" value="Jaffna"/>
+                        <StringItem index="10" value="Rathnapura"/>
+                        <StringItem index="11" value="Anuradhapura"/>
+                        <StringItem index="12" value="Polonnaruwa"/>
+                        <StringItem index="13" value="Tricomalee"/>
+                        <StringItem index="14" value="Kurunagala"/>
+                        <StringItem index="15" value="Nuwara Eliya"/>
+                        <StringItem index="16" value="Ampara"/>
+                        <StringItem index="17" value="Wawniya"/>
                       </StringArray>
                     </Property>
                   </Properties>
