@@ -125,7 +125,7 @@ public class AdminUi extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 102));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/profile-user.png"))); // NOI18N
 
@@ -589,7 +589,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
         );
 
-        jPanel10.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel10.setToolTipText("");
 
         complainTabbedPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -642,6 +642,7 @@ public class AdminUi extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("View Complain");
 
@@ -656,7 +657,7 @@ public class AdminUi extends javax.swing.JFrame {
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -665,7 +666,7 @@ public class AdminUi extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addContainerGap())
@@ -677,7 +678,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addGap(30, 30, 30))
         );
 
         complainTabbedPane.addTab("recieved", jPanel13);
@@ -818,8 +819,9 @@ public class AdminUi extends javax.swing.JFrame {
 
         complainTabbedPane.addTab("read", jPanel20);
 
-        jPanel11.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel11.setToolTipText("");
 
+        jPanel14.setBackground(new java.awt.Color(204, 255, 204));
         jPanel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel14MouseClicked(evt);
@@ -847,6 +849,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
+        jPanel15.setBackground(new java.awt.Color(204, 255, 204));
         jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel15MouseClicked(evt);

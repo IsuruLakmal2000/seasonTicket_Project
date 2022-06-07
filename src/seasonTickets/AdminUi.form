@@ -45,7 +45,7 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+              <Color blue="66" green="cc" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -972,9 +972,7 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel10">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="cc" type="rgb"/>
-                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
 
                   <Layout>
@@ -1026,7 +1024,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jPanel16" max="32767" attributes="0"/>
                                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                                       </Group>
@@ -1041,7 +1039,7 @@
                                       <Component id="jScrollPane1" min="-2" pref="324" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1133,7 +1131,7 @@
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel8" alignment="1" pref="66" max="32767" attributes="0"/>
+                                      <Component id="jLabel8" alignment="1" pref="73" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
@@ -1142,6 +1140,9 @@
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Segoe UI" size="16" style="1"/>
+                                    </Property>
+                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="View Complain"/>
@@ -1375,9 +1376,7 @@
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel11">
                       <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="ff" green="ff" red="cc" type="rgb"/>
-                        </Property>
+                        <Property name="toolTipText" type="java.lang.String" value=""/>
                       </Properties>
 
                       <Layout>
@@ -1401,6 +1400,11 @@
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JPanel" name="jPanel14">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+                            </Property>
+                          </Properties>
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel14MouseClicked"/>
                           </Events>
@@ -1438,6 +1442,11 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel15">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+                            </Property>
+                          </Properties>
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel15MouseClicked"/>
                           </Events>
