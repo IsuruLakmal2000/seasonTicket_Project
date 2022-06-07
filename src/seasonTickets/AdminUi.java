@@ -221,9 +221,16 @@ public class AdminUi extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,6 +239,9 @@ public class AdminUi extends javax.swing.JFrame {
             }
         });
         jScrollPane3.setViewportView(jTable3);
+        if (jTable3.getColumnModel().getColumnCount() > 0) {
+            jTable3.getColumnModel().getColumn(11).setResizable(false);
+        }
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -677,7 +687,7 @@ public class AdminUi extends javax.swing.JFrame {
          toPlace3.removeAllItems();
          fromPlace3.removeAllItems();
          selectedDistrict3 = DistrictStudentSignUp3.getSelectedItem().toString();
-         System.out.println(selectedDistrict3);
+         //System.out.println(selectedDistrict3);
         
           toPlaceDropdown();
           fromPlaceDropdown();
