@@ -19,7 +19,7 @@ public class dbConnection {
     
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        con =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+        con =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
 
         } 
     catch (ClassNotFoundException ex) {

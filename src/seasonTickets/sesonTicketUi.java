@@ -110,7 +110,8 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -259,7 +260,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
+                .addContainerGap(114, Short.MAX_VALUE)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
         );
@@ -398,7 +399,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
                     .addComponent(CardNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CardMonth, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                    .addComponent(CardMonth, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
                         .addComponent(jLabel8)
@@ -443,36 +444,51 @@ public class sesonTicketUi extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(68, 68, 68)
                 .addComponent(jButton6)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Payment success", jPanel4);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"2022/03/28", "April", "Rs 200.00"},
+                {"2022/04/26", "May", "Rs.250"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Order Date", "Valid Month", "Price"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 428, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Order history", jPanel5);
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 428, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("tab5", jPanel6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -488,71 +504,13 @@ public class sesonTicketUi extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CardMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardMonthActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CardMonthActionPerformed
-
-    private void CardYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardYearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CardYearActionPerformed
-
-    private void CardCVVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardCVVActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CardCVVActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Order a ticket button
-        jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void PayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PayButtonActionPerformed
-        // Pay Button
-        //should add database code here
-        
-        try{
-            con1 = dbs.getConnection();
-
-            pst = con1.prepareStatement("insert into payments(id,name,scl_uni,address,destnation,gender,ticket_type)values(?,?,?,?,?,?,?)");
-            
-            //adding
-            pst.setString(1, id);
-            pst.setString(2, profileName);
-            pst.setString(3, scl_uni);
-            pst.setString(4, address);
-            pst.setString(5, destination);
-            pst.setString(6, gender);
-            pst.setString(7, ticket_type);
-            
-            pst.executeUpdate();
-        }
-        
-        catch (SQLException ex) {
-            Logger.getLogger(sesonTicketUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        if (NameText.getText().equals("")|| CardNumber.getText().equals("") || CardMonth.getText().equals("")|| CardYear.getText().equals("")|| CardCVV.getText().equals("")||CardMonth.getText().equals("MM")|| CardYear.getText().equals("YYYY")){
-            JOptionPane.showMessageDialog(null, "Please fill all the details");         
-           // PayButton.setEnabled(true);
-        }
-        else{
-            jTabbedPane1.setSelectedIndex(2);   
-            
-        }
-        
-    }//GEN-LAST:event_PayButtonActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // Order history
-        jTabbedPane1.setSelectedIndex(3);
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Order history side button
@@ -570,33 +528,10 @@ public class sesonTicketUi extends javax.swing.JFrame {
         new logInUi().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void NameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NameTextActionPerformed
-
-    private void CardNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardNumberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CardNumberActionPerformed
-
-    private void NameTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NameTextMouseClicked
-        NameText.setText("");
-    }//GEN-LAST:event_NameTextMouseClicked
-
-    private void CardMonthMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardMonthMouseClicked
-        CardMonth.setText("");
-    }//GEN-LAST:event_CardMonthMouseClicked
-
-    private void CardYearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardYearMouseClicked
-        CardYear.setText("");
-    }//GEN-LAST:event_CardYearMouseClicked
-
-    private void CardMonthMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardMonthMouseExited
-//        
-    }//GEN-LAST:event_CardMonthMouseExited
-
-    private void CardYearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardYearMouseExited
-//        
-    }//GEN-LAST:event_CardYearMouseExited
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // Order history
+        jTabbedPane1.setSelectedIndex(3);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         if(CardMonth.getText().equals("")){
@@ -607,13 +542,94 @@ public class sesonTicketUi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPanel3MouseClicked
 
-    private void MonthSelectComboMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MonthSelectComboMouseClicked
+    private void PayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PayButtonActionPerformed
+        // Pay Button
+        //should add database code here
 
-    }//GEN-LAST:event_MonthSelectComboMouseClicked
+        try{
+            con1 = dbs.getConnection();
+
+            pst = con1.prepareStatement("insert into payments(id,name,scl_uni,address,destnation,gender,ticket_type)values(?,?,?,?,?,?,?)");
+
+            //adding
+            pst.setString(1, id);
+            pst.setString(2, profileName);
+            pst.setString(3, scl_uni);
+            pst.setString(4, address);
+            pst.setString(5, destination);
+            pst.setString(6, gender);
+            pst.setString(7, ticket_type);
+
+            pst.executeUpdate();
+        }
+
+        catch (SQLException ex) {
+            Logger.getLogger(sesonTicketUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        if (NameText.getText().equals("")|| CardNumber.getText().equals("") || CardMonth.getText().equals("")|| CardYear.getText().equals("")|| CardCVV.getText().equals("")||CardMonth.getText().equals("MM")|| CardYear.getText().equals("YYYY")){
+            JOptionPane.showMessageDialog(null, "Please fill all the details");
+            // PayButton.setEnabled(true);
+        }
+        else{
+            jTabbedPane1.setSelectedIndex(2);
+
+        }
+
+    }//GEN-LAST:event_PayButtonActionPerformed
+
+    private void CardCVVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardCVVActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CardCVVActionPerformed
+
+    private void CardYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardYearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CardYearActionPerformed
+
+    private void CardYearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardYearMouseExited
+        //
+    }//GEN-LAST:event_CardYearMouseExited
+
+    private void CardYearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardYearMouseClicked
+        CardYear.setText("");
+    }//GEN-LAST:event_CardYearMouseClicked
+
+    private void CardMonthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardMonthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CardMonthActionPerformed
+
+    private void CardMonthMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardMonthMouseExited
+        //
+    }//GEN-LAST:event_CardMonthMouseExited
+
+    private void CardMonthMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardMonthMouseClicked
+        CardMonth.setText("");
+    }//GEN-LAST:event_CardMonthMouseClicked
+
+    private void CardNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CardNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CardNumberActionPerformed
+
+    private void NameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameTextActionPerformed
+
+    private void NameTextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NameTextMouseClicked
+        NameText.setText("");
+    }//GEN-LAST:event_NameTextMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Order a ticket button
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void MonthSelectComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonthSelectComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MonthSelectComboActionPerformed
+
+    private void MonthSelectComboMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MonthSelectComboMouseClicked
+
+    }//GEN-LAST:event_MonthSelectComboMouseClicked
     public void setProfileName(){
         //jLabel222.setText(profileName);
             
@@ -686,9 +702,10 @@ public class sesonTicketUi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
