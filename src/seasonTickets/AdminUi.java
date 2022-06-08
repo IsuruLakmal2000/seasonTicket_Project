@@ -60,7 +60,7 @@ public class AdminUi extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        PrintButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -275,47 +275,19 @@ public class AdminUi extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(orderTable);
 
+        jPanel3.add(jScrollPane2);
+
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Orders");
+        jPanel3.add(jLabel4);
 
-        PrintButton.setText("Print All");
-        PrintButton.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Print All");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrintButtonActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(PrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 58, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(374, 374, 374))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44))))))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(100, Short.MAX_VALUE))
-        );
+        jPanel3.add(jButton1);
 
         jTabbedPane1.addTab("Orders", jPanel3);
 
@@ -1241,6 +1213,8 @@ public class AdminUi extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("lost items", jPanel21);
 
+        jTabbedPane1.setSelectedIndex(1);
+
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 832, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1267,7 +1241,7 @@ public class AdminUi extends javax.swing.JFrame {
          int c;
             
             try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("select*from lost_item");
@@ -1313,7 +1287,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("select*from read_complain");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1365,7 +1339,7 @@ public class AdminUi extends javax.swing.JFrame {
             System.out.println("pssddasdasdasdast run");
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("insert into read_complain(complain_id,person_name,p_number,about_complain)values(?,?,?,?)");
             
              pst.setInt(1, id);
@@ -1401,7 +1375,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("select*from complain");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1444,7 +1418,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("select*from reg");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1493,7 +1467,7 @@ public class AdminUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("select*from payments");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1532,6 +1506,8 @@ public class AdminUi extends javax.swing.JFrame {
     }
     
     
+    
+    
     private void adminUiDetailButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminUiDetailButtonActionPerformed
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(1);
@@ -1568,7 +1544,7 @@ public class AdminUi extends javax.swing.JFrame {
             
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
             pst = con1.prepareStatement("update reg set name=?,schl_uni=?,address=?,district=?,from_=?,to_=?,age=?,ticket_type=?,stu_uni_reg_no=?,route_no=?,gender=? where id=?");
                  
           //  add(toPlace); */
@@ -1884,10 +1860,15 @@ public class AdminUi extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Printing...");
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox DistrictStudentSignUp3;
-    private javax.swing.JButton PrintButton;
     private javax.swing.JButton adminEdit;
     private javax.swing.JButton adminUiDetailButton;
     private javax.swing.JButton adminUiOrderButton;
@@ -1898,6 +1879,7 @@ public class AdminUi extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler15;
     private javax.swing.Box.Filler filler16;
     private javax.swing.JComboBox fromPlace3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
@@ -1967,7 +1949,6 @@ public class AdminUi extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable lostItemTable;
     private javax.swing.JButton markAsRead;
