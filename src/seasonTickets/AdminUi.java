@@ -1242,7 +1242,7 @@ public class AdminUi extends javax.swing.JFrame {
          int c;
             
             try {
-            dbConnection dbs = new dbConnection();
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("select*from lost_item");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
