@@ -59,7 +59,7 @@ public class AdminUi extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
-        PrintButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -247,10 +247,10 @@ public class AdminUi extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Orders");
 
-        PrintButton.setText("Print All");
-        PrintButton.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Print All");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrintButtonActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -262,7 +262,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(PrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGap(0, 58, Short.MAX_VALUE)
@@ -282,7 +282,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(PrintButton)
+                .addComponent(jButton1)
                 .addContainerGap(91, Short.MAX_VALUE))
         );
 
@@ -1487,10 +1487,10 @@ public class AdminUi extends javax.swing.JFrame {
         complainTabbedPane.setSelectedIndex(2);
     }//GEN-LAST:event_jPanel15MouseClicked
 
-    private void PrintButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintButtonActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Printing...");
-    }//GEN-LAST:event_PrintButtonActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1529,7 +1529,6 @@ public class AdminUi extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox DistrictStudentSignUp3;
-    private javax.swing.JButton PrintButton;
     private javax.swing.JButton adminEdit;
     private javax.swing.JButton adminUiDetailButton;
     private javax.swing.JButton adminUiOrderButton;
@@ -1540,6 +1539,7 @@ public class AdminUi extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler15;
     private javax.swing.Box.Filler filler16;
     private javax.swing.JComboBox fromPlace3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
