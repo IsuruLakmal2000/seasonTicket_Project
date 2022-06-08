@@ -3,6 +3,16 @@ package seasonTickets;
 import javax.swing.JOptionPane;
 import java.time.LocalDateTime; 
 import java.time.format.DateTimeFormatter; 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
  /* To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,13 +28,29 @@ public class sesonTicketUi extends javax.swing.JFrame {
     /**
      * Creates new form sesonTicketUi
      */
-     public String profileName ;
+    public String profileName ;
+    public String id;
+    public String scl_uni;
+    public String address;
+    public String destination;
+    public String gender;
+    public String ticket_type;
+     Connection con1;
+     PreparedStatement pst;
      
-    public sesonTicketUi(String name) {
+     
+    public sesonTicketUi(String name, String id,String scl_uni,String address,String destination,String gender,String ticket_type) {
         initComponents();
+        this.id = id;
+        this.profileName = name;
+        this.scl_uni = scl_uni;
+        this.address = address;
+        this.destination = destination;
+        this.gender = gender;
+        this.ticket_type = ticket_type;
         
         jLabel222.setText(name);
-        //System.out.println("constructor run"); //test01
+        //System.out.println(destination); //test01
         System.out.println("constructor run"); 
         monthUpdate();
         
@@ -493,13 +519,38 @@ public class sesonTicketUi extends javax.swing.JFrame {
 
     private void PayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PayButtonActionPerformed
         // Pay Button
-
+        //should add database code here
+        
+        try{
+        Class.forName("com.mysql.jdbc.Driver");    
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            pst = con1.prepareStatement("insert into payments(id,name,scl_uni,address,destnation,gender,ticket_type)values(?,?,?,?,?,?,?)");
+            
+            //adding
+            pst.setString(1, id);
+            pst.setString(2, profileName);
+            pst.setString(3, scl_uni);
+            pst.setString(4, address);
+            pst.setString(5, destination);
+            pst.setString(6, gender);
+            pst.setString(7, ticket_type);
+            
+            pst.executeUpdate();
+        }
+        catch(ClassNotFoundException ex){
+            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(sesonTicketUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         if (NameText.getText().equals("")|| CardNumber.getText().equals("") || CardMonth.getText().equals("")|| CardYear.getText().equals("")|| CardCVV.getText().equals("")||CardMonth.getText().equals("MM")|| CardYear.getText().equals("YYYY")){
             JOptionPane.showMessageDialog(null, "Please fill all the details");         
            // PayButton.setEnabled(true);
         }
         else{
-            jTabbedPane1.setSelectedIndex(2);       
+            jTabbedPane1.setSelectedIndex(2);   
+            
         }
         
     }//GEN-LAST:event_PayButtonActionPerformed
