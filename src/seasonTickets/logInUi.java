@@ -1741,6 +1741,12 @@ public class logInUi extends javax.swing.JFrame {
     Connection con1,con2;
     PreparedStatement pst,pst2;
     public String profileName;
+    public String id;
+    public String scl_uni;
+    public String address;
+    public String destination;
+    public String gender;
+    public String ticket_type;
     String selectedDistrict;
     
     
@@ -1773,7 +1779,7 @@ public class logInUi extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("insert into adminDetails(district,depot_number,depot_name,password)values(?,?,?,?)");
             pst.setString(1, district);
             pst.setString(2, depotNum);
@@ -1789,7 +1795,6 @@ public class logInUi extends javax.swing.JFrame {
         Dname.setText("");
         adminCPassword.setText("");       
         
-            
             jTabbedPane1.setSelectedIndex(6);
     
         } catch (ClassNotFoundException ex) {
@@ -1797,6 +1802,8 @@ public class logInUi extends javax.swing.JFrame {
         }
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+            String names;
+            //sesonTicketUi(names);
         }
             
         }
@@ -1827,7 +1834,7 @@ public class logInUi extends javax.swing.JFrame {
             
         }else{
         
-            String name = txtName.getText();   
+        String name = txtName.getText();   
         String sclUni = txtSclUni.getText();
         String address = txtAddress.getText();
         
@@ -1847,7 +1854,7 @@ public class logInUi extends javax.swing.JFrame {
             try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("insert into reg(name,schl_uni,address,district,from_,to_,age,ticket_type,stu_uni_reg_no,route_no,gender,password,email)values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
             
           //  add(toPlace); */
@@ -1918,7 +1925,7 @@ public class logInUi extends javax.swing.JFrame {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             
             pst =con1.prepareStatement("Select *from admindetails where id =? and password=? ");
             pst.setString(1,adminLogInId.getText());
@@ -1971,7 +1978,7 @@ public class logInUi extends javax.swing.JFrame {
             
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             
             pst =con1.prepareStatement("Select *from reg where email =? and password=? ");
             pst.setString(1,studentId.getText());
@@ -1982,7 +1989,14 @@ public class logInUi extends javax.swing.JFrame {
            
             if(rs.next()){
                 
-                profileName =rs.getString("name");    
+                profileName =rs.getString("name"); 
+                id = rs.getString("id");
+                scl_uni = rs.getString("schl_uni");
+                address = rs.getString("address");
+                destination = rs.getString("from_");
+                gender = rs.getString("gender");
+                ticket_type = rs.getString("ticket_type");
+                //System.out.println(id);
                 jTabbedPane1.setSelectedIndex(7);
                 
             }else{
@@ -1997,11 +2011,7 @@ public class logInUi extends javax.swing.JFrame {
             
         }catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-           
-        
-        
-        
+        }  
         
     }//GEN-LAST:event_studentLogInButtonActionPerformed
 
@@ -2035,7 +2045,7 @@ public class logInUi extends javax.swing.JFrame {
         
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
            // st = con1.createStatement();
           
             
@@ -2065,7 +2075,7 @@ public class logInUi extends javax.swing.JFrame {
         
          try {
             Class.forName("com.mysql.jdbc.Driver");
-            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             ResultSet rs3;
              pst4 = con3.prepareStatement("select *from towns");
              rs3 = pst4.executeQuery();
@@ -2092,7 +2102,7 @@ public class logInUi extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         dispose();
-        new sesonTicketUi(profileName).setVisible(true);
+        new sesonTicketUi(profileName,id,scl_uni,address,destination,gender,ticket_type).setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -2131,7 +2141,7 @@ public class logInUi extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
             pst = con1.prepareStatement("insert into complain(person_name,p_number,date_,time_,busNum,about_complain)values(?,?,?,?,?,?)");
             pst.setString(1, name);
             pst.setString(2, phoneNum);
