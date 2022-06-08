@@ -24,6 +24,7 @@ public class AdminUi extends javax.swing.JFrame {
     /**
      * Creates new form AdminUi
      */
+    dbConnection dbs = new dbConnection();
     public AdminUi() {
 
         initComponents();
@@ -57,6 +58,7 @@ public class AdminUi extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         orderTable = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
@@ -197,24 +199,21 @@ public class AdminUi extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(adminUiOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(adminUiDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(85, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(adminUiOrderButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(adminUiDetailButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(70, 70, 70))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addComponent(adminUiDetailButton)
                 .addGap(18, 18, 18)
                 .addComponent(adminUiOrderButton)
@@ -222,7 +221,7 @@ public class AdminUi extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton5)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -275,11 +274,9 @@ public class AdminUi extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(orderTable);
 
-        jPanel3.add(jScrollPane2);
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Orders");
-        jPanel3.add(jLabel4);
 
         jButton1.setText("Print All");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -287,7 +284,50 @@ public class AdminUi extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1);
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(316, 316, 316)))
+                .addContainerGap())
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
 
         jTabbedPane1.addTab("Orders", jPanel3);
 
@@ -1241,9 +1281,7 @@ public class AdminUi extends javax.swing.JFrame {
          int c;
             
             try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            dbConnection dbs = new dbConnection();
             pst = con1.prepareStatement("select*from lost_item");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1270,9 +1308,7 @@ public class AdminUi extends javax.swing.JFrame {
 
              
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1285,9 +1321,7 @@ public class AdminUi extends javax.swing.JFrame {
         int c;
             
             try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("select*from read_complain");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1312,8 +1346,6 @@ public class AdminUi extends javax.swing.JFrame {
 
              
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
@@ -1336,10 +1368,7 @@ public class AdminUi extends javax.swing.JFrame {
             int pNum = Integer.parseInt(Df.getValueAt(selectedIndex,2).toString());
             String complain =(Df.getValueAt(selectedIndex, 5).toString());
             
-            System.out.println("pssddasdasdasdast run");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("insert into read_complain(complain_id,person_name,p_number,about_complain)values(?,?,?,?)");
             
              pst.setInt(1, id);
@@ -1357,9 +1386,7 @@ public class AdminUi extends javax.swing.JFrame {
            // complainTabbedPane.setSelectedIndex(0);
         
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1373,9 +1400,7 @@ public class AdminUi extends javax.swing.JFrame {
         int c;
             
             try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("select*from complain");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1402,9 +1427,7 @@ public class AdminUi extends javax.swing.JFrame {
 
              
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1416,9 +1439,7 @@ public class AdminUi extends javax.swing.JFrame {
             int c;
             
             try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("select*from reg");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1452,9 +1473,7 @@ public class AdminUi extends javax.swing.JFrame {
 
              
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1465,9 +1484,7 @@ public class AdminUi extends javax.swing.JFrame {
         int c;
             
             try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("select*from payments");
             ResultSet rs = pst.executeQuery();
             ResultSetMetaData Rss = rs.getMetaData();
@@ -1496,9 +1513,7 @@ public class AdminUi extends javax.swing.JFrame {
 
              
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1542,9 +1557,7 @@ public class AdminUi extends javax.swing.JFrame {
             
             int id = Integer.parseInt(Df.getValueAt(selectedIndex,0).toString());
             
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","nuttertools");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("update reg set name=?,schl_uni=?,address=?,district=?,from_=?,to_=?,age=?,ticket_type=?,stu_uni_reg_no=?,route_no=?,gender=? where id=?");
                  
           //  add(toPlace); */
@@ -1578,9 +1591,7 @@ public class AdminUi extends javax.swing.JFrame {
             jTabbedPane1.setSelectedIndex(1);
         
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1616,8 +1627,7 @@ public class AdminUi extends javax.swing.JFrame {
         PreparedStatement pst3;
         
          try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con2 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con2 = dbs.getConnection();
            // st = con1.createStatement();
           
             
@@ -1633,10 +1643,8 @@ public class AdminUi extends javax.swing.JFrame {
             }
            
             
-        } catch (ClassNotFoundException ex) {
-           Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-            
-        }catch (SQLException ex) {
+        }
+         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
            
@@ -1646,10 +1654,9 @@ public class AdminUi extends javax.swing.JFrame {
         PreparedStatement pst5;
         
          try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con3 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+           con1 = dbs.getConnection();
             ResultSet rs3;
-             pst5 = con3.prepareStatement("select *from towns");
+             pst5 = con1.prepareStatement("select *from towns");
              rs3 = pst5.executeQuery();
          
             while(rs3.next()){
@@ -1658,10 +1665,8 @@ public class AdminUi extends javax.swing.JFrame {
             }
            
             
-        } catch (ClassNotFoundException ex) {
-           Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-            
-        }catch (SQLException ex) {
+        } 
+         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -1752,10 +1757,7 @@ public class AdminUi extends javax.swing.JFrame {
         try {
             
             int id = Integer.parseInt(Df.getValueAt(selectedIndex,0).toString());
-            System.out.println("pssddasdasdasdast run");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 = dbs.getConnection();
             pst = con1.prepareStatement("delete from  complain where complain_id =?");
                  
           //  add(toPlace); */
@@ -1770,9 +1772,7 @@ public class AdminUi extends javax.swing.JFrame {
             complainTabbedPane.setSelectedIndex(0);
         
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1929,6 +1929,7 @@ public class AdminUi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
