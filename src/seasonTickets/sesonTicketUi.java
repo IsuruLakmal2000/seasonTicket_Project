@@ -25,6 +25,7 @@ import java.util.logging.Logger;
  */
 public class sesonTicketUi extends javax.swing.JFrame {
 
+    dbConnection dbs = new dbConnection();
     /**
      * Creates new form sesonTicketUi
      */
@@ -522,8 +523,8 @@ public class sesonTicketUi extends javax.swing.JFrame {
         //should add database code here
         
         try{
-        Class.forName("com.mysql.jdbc.Driver");    
-            con1 =DriverManager.getConnection("jdbc:mysql://localhost/seasonTicket", "root","21241@ppr");
+            con1 = dbs.getConnection();
+
             pst = con1.prepareStatement("insert into payments(id,name,scl_uni,address,destnation,gender,ticket_type)values(?,?,?,?,?,?,?)");
             
             //adding
@@ -537,9 +538,7 @@ public class sesonTicketUi extends javax.swing.JFrame {
             
             pst.executeUpdate();
         }
-        catch(ClassNotFoundException ex){
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
         catch (SQLException ex) {
             Logger.getLogger(sesonTicketUi.class.getName()).log(Level.SEVERE, null, ex);
         }
