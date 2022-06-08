@@ -205,6 +205,9 @@ public class logInUi extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel72 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel18 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
@@ -597,14 +600,12 @@ public class logInUi extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel34)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel79)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(passowrdTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                            .addComponent(studentId, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                            .addComponent(studentLogInButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(251, Short.MAX_VALUE))))
+                        .addComponent(jLabel79))
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(passowrdTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                        .addComponent(studentId, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                        .addComponent(studentLogInButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1035,12 +1036,11 @@ public class logInUi extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
                     .addComponent(jLabel73, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         jPanel12Layout.setVerticalGroup(
@@ -1378,7 +1378,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addComponent(jLabel70)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
+                .addContainerGap(217, Short.MAX_VALUE)
                 .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(202, 202, 202))
         );
@@ -1389,7 +1389,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addComponent(jLabel70)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("welcome", jPanel21);
@@ -1416,7 +1416,7 @@ public class logInUi extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(202, Short.MAX_VALUE)
+                .addContainerGap(210, Short.MAX_VALUE)
                 .addComponent(jLabel45)
                 .addGap(193, 193, 193))
             .addGroup(jPanel17Layout.createSequentialGroup()
@@ -1486,7 +1486,7 @@ public class logInUi extends javax.swing.JFrame {
                 .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabel55)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("complain submited", jPanel25);
@@ -1501,7 +1501,7 @@ public class logInUi extends javax.swing.JFrame {
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addGap(248, 248, 248)
                 .addComponent(jLabel56)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1656,7 +1656,7 @@ public class logInUi extends javax.swing.JFrame {
                     .addGroup(jPanel36Layout.createSequentialGroup()
                         .addGap(253, 253, 253)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1700,16 +1700,16 @@ public class logInUi extends javax.swing.JFrame {
         jPanel38Layout.setHorizontalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
-                .addContainerGap(273, Short.MAX_VALUE)
+                .addContainerGap(231, Short.MAX_VALUE)
                 .addComponent(jLabel69)
-                .addGap(242, 242, 242))
+                .addGap(292, 292, 292))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel69)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         jLabel71.setText("Select District");
@@ -1748,12 +1748,23 @@ public class logInUi extends javax.swing.JFrame {
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel72)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 165, Short.MAX_VALUE))
+                .addGap(0, 88, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("contactNum", jPanel37);
 
-        jPanel15.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 49, -1, 350));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("\t\tNotices\n                  * Bus delay in Rt no - 138 from may 12 to may 13\n\n\n\t\tVacancies\n                 \t * Driver, Conductor vacancies are available.");
+        jScrollPane3.setViewportView(jTextArea1);
+
+        jTabbedPane2.addTab("Notices", jScrollPane3);
+
+        jTabbedPane2.setSelectedIndex(6);
+
+        jPanel15.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 49, 630, 350));
+        jPanel15.add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, -1, -1));
 
         jTabbedPane1.addTab("new Homepage", jPanel15);
 
@@ -2238,13 +2249,6 @@ public class logInUi extends javax.swing.JFrame {
     
     }//GEN-LAST:event_toPlaceMouseClicked
 
-    private void complainBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complainBtnActionPerformed
-        // Complain button pressed
-        
-        jTabbedPane1.setSelectedIndex(10);
-        
-    }//GEN-LAST:event_complainBtnActionPerformed
-
     private void cBusNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBusNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cBusNumActionPerformed
@@ -2305,79 +2309,6 @@ public class logInUi extends javax.swing.JFrame {
         
     }//GEN-LAST:event_complainSubmtActionPerformed
 
-    private void lPnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lPnumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lPnumActionPerformed
-
-    private void lostSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lostSubmitActionPerformed
-        // Lost item submit
-        
-         if(lName.getText().equals("")||lPnum.getText().equals("")|| lDate.getText().equals("")||lDis.getText().equals("")){
-             JOptionPane.showMessageDialog(null, "Please fill required details");
-        }else{
-        String name = lName.getText();   
-        String phoneNum = lPnum.getText();
-        String date = lDate.getText();
-        String time= lTime.getText();
-              //  String busNum=null;
-        //busNum = cBusNum.getText();
-        String disTxt = lDis.getText();
-        
-        
-        
-        try {
-            con1 = dbs.getConnection();
-            pst = con1.prepareStatement("insert into lost_item(person_name,p_number,date_,time_,about_item)values(?,?,?,?,?)");
-            pst.setString(1, name);
-            pst.setString(2, phoneNum);
-            pst.setString(3, date);
-            pst.setString(4, time);
-             
-             pst.setString(5, disTxt);
-            
-            
-            pst.executeUpdate();
-           
-            
-        lName.setText("");   
-        lPnum.setText("");
-        lDate.setText("");
-        cTime.setText("");     
-        lTime.setText("");
-        lDis.setText("");
-            
-            //jTabbedPane1.setSelectedIndex(9);
-            jTabbedPane2.setSelectedIndex(4);
-           // System.out.println("sdsadsada");
-        //con1.close();
-            
-            
-        
-        }
-        catch (SQLException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-         catch (IndexOutOfBoundsException ex) {
-            Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            
-        }
-        
-       
-        
-        
-    }//GEN-LAST:event_lostSubmitActionPerformed
-
-    private void lostBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lostBtnActionPerformed
-        // TODO add your handling code here:
-         jTabbedPane2.setSelectedIndex(3);
-    }//GEN-LAST:event_lostBtnActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        jTabbedPane2.setSelectedIndex(0);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void complainAndLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_complainAndLMouseClicked
         //complain and lost item button clicked
         jPanel19.setBackground(new Color(71,181,255));
@@ -2426,7 +2357,7 @@ public class logInUi extends javax.swing.JFrame {
         jPanel28.setBackground(new Color(71,181,255));
         jPanel20.setBackground(new Color(19,99,223));
         jPanel29.setBackground(new Color(19,99,223));
-        
+        jTabbedPane2.setSelectedIndex(6);
     }//GEN-LAST:event_jLabel65MouseClicked
 
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
@@ -2469,6 +2400,75 @@ public class logInUi extends javax.swing.JFrame {
     private void jLabel79MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel79MouseExited
         jLabel79.setForeground(new Color(0,51,255));
     }//GEN-LAST:event_jLabel79MouseExited
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane2.setSelectedIndex(0);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void lostSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lostSubmitActionPerformed
+        // Lost item submit
+
+        if(lName.getText().equals("")||lPnum.getText().equals("")|| lDate.getText().equals("")||lDis.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Please fill required details");
+        }else{
+            String name = lName.getText();
+            String phoneNum = lPnum.getText();
+            String date = lDate.getText();
+            String time= lTime.getText();
+            //  String busNum=null;
+            //busNum = cBusNum.getText();
+            String disTxt = lDis.getText();
+
+            try {
+                con1 = dbs.getConnection();
+                pst = con1.prepareStatement("insert into lost_item(person_name,p_number,date_,time_,about_item)values(?,?,?,?,?)");
+                pst.setString(1, name);
+                pst.setString(2, phoneNum);
+                pst.setString(3, date);
+                pst.setString(4, time);
+
+                pst.setString(5, disTxt);
+
+                pst.executeUpdate();
+
+                lName.setText("");
+                lPnum.setText("");
+                lDate.setText("");
+                cTime.setText("");
+                lTime.setText("");
+                lDis.setText("");
+
+                //jTabbedPane1.setSelectedIndex(9);
+                jTabbedPane2.setSelectedIndex(4);
+                // System.out.println("sdsadsada");
+                //con1.close();
+
+            }
+            catch (SQLException ex) {
+                Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            catch (IndexOutOfBoundsException ex) {
+                Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+    }//GEN-LAST:event_lostSubmitActionPerformed
+
+    private void lPnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lPnumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lPnumActionPerformed
+
+    private void lostBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lostBtnActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane2.setSelectedIndex(3);
+    }//GEN-LAST:event_lostBtnActionPerformed
+
+    private void complainBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complainBtnActionPerformed
+        // Complain button pressed
+
+        jTabbedPane1.setSelectedIndex(10);
+    }//GEN-LAST:event_complainBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2667,8 +2667,11 @@ public class logInUi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField lDate;
     private javax.swing.JTextPane lDis;
     private javax.swing.JTextField lName;
