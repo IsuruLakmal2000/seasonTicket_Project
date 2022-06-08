@@ -2026,7 +2026,6 @@ public class logInUi extends javax.swing.JFrame {
         
          try {
             con1 = dbs.getConnection();
-            
             ResultSet rs2;
              pst3 = con1.prepareStatement("select schools from places where district='"+selectedDistrict+"'");
              rs2 = pst3.executeQuery();
@@ -2049,9 +2048,9 @@ public class logInUi extends javax.swing.JFrame {
         PreparedStatement pst4;
         
          try {
-            con1 = dbs.getConnection();
-
-            ResultSet rs3;
+             con1 = dbs.getConnection();
+             
+             ResultSet rs3;
              pst4 = con1.prepareStatement("select *from towns");
              rs3 = pst4.executeQuery();
          
@@ -2173,7 +2172,6 @@ public class logInUi extends javax.swing.JFrame {
         
         try {
             con1 = dbs.getConnection();
-
             pst = con1.prepareStatement("insert into lost_item(person_name,p_number,date_,time_,about_item)values(?,?,?,?,?)");
             pst.setString(1, name);
             pst.setString(2, phoneNum);
@@ -2196,10 +2194,11 @@ public class logInUi extends javax.swing.JFrame {
             //jTabbedPane1.setSelectedIndex(9);
             jTabbedPane2.setSelectedIndex(4);
            // System.out.println("sdsadsada");
-        con1.close();
+        //con1.close();
             
             
-        } 
+        
+        }
         catch (SQLException ex) {
             Logger.getLogger(logInUi.class.getName()).log(Level.SEVERE, null, ex);
         }
